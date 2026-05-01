@@ -1,0 +1,8 @@
+commit	val_bpb	size_mb	status	description
+6e19eeb	2.4118	11.26	keep	baseline 9L 512d 1024vocab
+6e19eeb	2.4084	11.26	keep	WARMDOWN_ITERS=100 (was 1200>iters)
+6e19eeb	2.3918	12.14	keep	MATRIX_LR=0.06 (+warmdown fix)
+6e19eeb	2.3917	12.81	discard	MATRIX_LR=0.08 (no improvement)
+6e19eeb	2.3924	12.14	discard	WARMDOWN_ITERS=150 + MATRIX_LR=0.06 (no improvement)
+7f431f2	2.3922	12.14	discard	Loop345+CrossPassXSA ENABLE_LOOPING_AT=0.35 (no improvement, scale=0 init too slow)
+7f431f2	2.3890	12.14	keep	Loop345 only CROSS_PASS_XSA=0 — depth recurrence improves BPB
